@@ -1,0 +1,41 @@
+.todoItem {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 25vw;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 2.4vh;
+  border-radius: 2.5vh;
+  border: 1px solid #c4cad5;
+  margin-top: 2.56vh;
+}
+
+.deleteIcon {
+  color: #697385;
+  margin-left: auto;
+}
+
+input[id="checkbox"] + label {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #c4cad5;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-right: 0.8vw;
+
+}
+
+input[id="checkbox"]:checked + label:after {
+  position: relative;
+  top: -5px;
+  left:1px;
+  content: "\2714";
+  font-size: 14px;
+
+}
+
+input[id="checkbox"] {
+  display: none;
+}
