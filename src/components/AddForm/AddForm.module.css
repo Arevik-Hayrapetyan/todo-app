@@ -11,16 +11,15 @@
   border-radius: 2.5vh;
 }
 
-.submitedValue{
-    margin-bottom: 2.56vh;
-  background-color: #FAFAFC;
-    
+.submitedValue {
+  margin-bottom: 2.56vh;
+  background-color: #fafafc;
 }
 
-.addBtn{
-    text-transform: uppercase;
-    color: #FC5F5F;
-    font-size: 0.8rem;
-    font-weight: 500;
-    cursor: pointer;
+.addBtn {
+  text-transform: uppercase;
+  color: #fc5f5f;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
 }

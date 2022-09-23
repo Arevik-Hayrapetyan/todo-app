@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react";
-import { setItems, getItems } from "../../helpers/localStorage";
+import { setItems } from "../../helpers/localStorage";
 import { nanoid } from "nanoid";
 import styles from "./AddForm.module.css";
 import { useEffect } from "react";
@@ -16,9 +16,8 @@ export default function AddForm({ todos, setTodo }) {
   }
 
   function handleAddTodo() {
-    setTitle("")
+    setTitle("");
     setTodo((prevState) => {
-      console.log(prevState, "prevState");
       return [
         ...prevState,
         {

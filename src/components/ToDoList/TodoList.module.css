@@ -1,3 +1,12 @@
-.listItems{
-    list-style-type: none;
+.listItems {
+  list-style-type: none;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (max-width: 769px) {
+  .listContainer {
+    width: 100%;
+  }
 }

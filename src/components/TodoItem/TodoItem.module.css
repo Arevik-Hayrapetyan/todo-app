@@ -3,15 +3,22 @@
   align-items: center;
   justify-content: start;
   width: 25vw;
+  white-space: initial;
   font-size: 1rem;
   font-weight: 400;
-  padding: 2.4vh;
+  padding: 1.3vh;
   border-radius: 2.5vh;
   border: 1px solid #c4cad5;
   margin-top: 2.56vh;
   background-color: #fafafc;
+  max-height: auto;
 }
 
+.text {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
 .deleteIcon {
   color: #697385;
   margin-left: auto;
@@ -32,18 +39,32 @@
   content: "\2714";
   font-size: 17px;
   position: absolute;
-  right: 1px;
-  top: -3px;
+  right: 0px;
+  top: -4px;
 }
 
 input[type="checkbox"] {
   appearance: none;
   border: 2px solid #c4cad5;
   margin-right: 0.8vw;
-  margin-top: 1.1vh;
-  width: 1.6em;
-  height: 1.6em;
+  min-width: 1.4em;
+  min-height: 1.4em;
   border-radius: 3px;
   outline: none;
   cursor: pointer;
+}
+
+.checkboxLabel {
+  padding: 0 !important;
+}
+
+@media screen and (max-width: 1000px) {
+  .todoItem {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 769px) {
+  .todoItem {
+    width: 70%;
+  }
 }

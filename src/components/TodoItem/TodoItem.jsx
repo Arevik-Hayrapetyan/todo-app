@@ -1,24 +1,23 @@
 import React, { Fragment } from "react";
 import styles from "./TodoItem.module.css";
-import Checkbox from "../Checkbox/Checkbox";
 
-export default function TodoItem({ id, todo, setTodo, handleCheck }) {
+export default function TodoItem({ todo, handleCheck, handleDelete }) {
   return (
     <Fragment>
       <li className={styles.todoItem}>
+        <input
+          className={todo.completed ? styles.checked : ""}
+          id={todo.id}
+          type="checkbox"
+          checked={todo.completed}
+          onChange={(e) => handleCheck(e, todo.id)}
+        />
+        <p className={styles.text}> {todo.title}</p>
 
-        <label htmlFor={todo.id}>
-          <input
-            className={todo.completed ? styles.checked : ""}
-            id={todo.id}
-            type="checkbox"
-            checked={todo.completed}
-            onChange={(e) => handleCheck(e, todo.id, todo.title)}
-          />
-        </label>
-        {todo.title}
-
-        <div className={styles.deleteIcon}>
+        <div
+          className={styles.deleteIcon}
+          onClick={() => handleDelete(todo.id)}
+        >
           <div className={styles.icon}></div>
         </div>
       </li>
