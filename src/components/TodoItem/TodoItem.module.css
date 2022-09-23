@@ -65,11 +65,6 @@ input[type="checkbox"] {
   padding: 0 !important;
 }
 
-@media screen and (max-width: 1000px) {
-  .todoItem {
-    width: 60%;
-  }
-}
 @media screen and (max-width: 769px) {
   .todoItem {
     width: 70%;
