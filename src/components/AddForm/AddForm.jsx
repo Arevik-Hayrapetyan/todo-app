@@ -17,7 +17,7 @@ export default function AddForm({ todos, setTodo }) {
   }
 
   function handleAddTodo() {
-    if (title.length === 0 || title === " ") {
+    if (title.trim().length === 0) {
       setErrorMessage("Input value cant be empty!");
       return;
     }
