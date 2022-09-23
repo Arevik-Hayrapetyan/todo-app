@@ -1,0 +1,26 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.submitedValue,
+.addBtn {
+  min-width: 25vw;
+  border: 1px solid #c4cad5;
+  padding: 2.4vh;
+  border-radius: 2.5vh;
+}
+
+.submitedValue{
+    margin-bottom: 2.56vh;
+  background-color: #FAFAFC;
+    
+}
+
+.addBtn{
+    text-transform: uppercase;
+    color: #FC5F5F;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+}

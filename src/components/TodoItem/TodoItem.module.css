@@ -9,33 +9,41 @@
   border-radius: 2.5vh;
   border: 1px solid #c4cad5;
   margin-top: 2.56vh;
+  background-color: #fafafc;
 }
 
 .deleteIcon {
   color: #697385;
   margin-left: auto;
-}
-
-input[id="checkbox"] + label {
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  border: 2px solid #c4cad5;
-  border-radius: 2px;
   cursor: pointer;
-  margin-right: 0.8vw;
-
 }
 
-input[id="checkbox"]:checked + label:after {
+.icon:after {
+  display: inline-block;
+  content: "\00d7";
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.checked {
   position: relative;
-  top: -5px;
-  left:1px;
+}
+.checked::before {
   content: "\2714";
-  font-size: 14px;
-
+  font-size: 17px;
+  position: absolute;
+  right: 1px;
+  top: -3px;
 }
 
-input[id="checkbox"] {
-  display: none;
+input[type="checkbox"] {
+  appearance: none;
+  border: 2px solid #c4cad5;
+  margin-right: 0.8vw;
+  margin-top: 1.1vh;
+  width: 1.6em;
+  height: 1.6em;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
 }
