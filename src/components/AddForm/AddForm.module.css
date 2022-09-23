@@ -23,3 +23,10 @@
   font-weight: 500;
   cursor: pointer;
 }
+
+.errorMessage {
+  margin-bottom: 2vh;
+  margin-left: 2vw;
+  color: #fc5f5f;
+  font-size: 11px;
+}

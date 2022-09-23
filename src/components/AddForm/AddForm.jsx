@@ -6,6 +6,7 @@ import { useEffect } from "react";
 
 export default function AddForm({ todos, setTodo }) {
   const [title, setTitle] = useState("");
+  const [errorMessage, setErrorMessage] = useState(null);
 
   useEffect(() => {
     setItems("todos", todos);
@@ -16,6 +17,11 @@ export default function AddForm({ todos, setTodo }) {
   }
 
   function handleAddTodo() {
+    if (title.length === 0 || title === " ") {
+      setErrorMessage("Input value cant be empty!");
+      return;
+    }
+    setErrorMessage(null);
     setTitle("");
     setTodo((prevState) => {
       return [
@@ -39,6 +45,7 @@ export default function AddForm({ todos, setTodo }) {
           type="text"
           placeholder="Lorem Ipsum"
         />
+        <span className={styles.errorMessage}>{errorMessage}</span>
         <button className={styles.addBtn} onClick={() => handleAddTodo()}>
           add
         </button>
