@@ -1,6 +1,5 @@
-import React from "react";
-import { Fragment } from "react";
-import styles from  "./Heading.module.css"
+import React, { Fragment } from "react";
+import styles from "./Heading.module.css";
 
 export default function Heading() {
   return (

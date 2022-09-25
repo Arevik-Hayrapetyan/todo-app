@@ -1,9 +1,9 @@
+import { useState } from "react";
 import Heading from "../Heading/Heading";
 import TodoList from "../ToDoList/TodoList";
 import AddForm from "../AddForm/AddForm";
-import styles from "./App.module.css";
-import { useState } from "react";
 import { getItems } from "../../helpers/localStorage";
+import styles from "./App.module.css";
 
 function App() {
   const [todos, setTodo] = useState(

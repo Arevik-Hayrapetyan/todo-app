@@ -1,8 +1,7 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import { setItems } from "../../helpers/localStorage";
 import { nanoid } from "nanoid";
 import styles from "./AddForm.module.css";
-import { useEffect } from "react";
 
 export default function AddForm({ todos, setTodo }) {
   const [title, setTitle] = useState("");
@@ -16,7 +15,7 @@ export default function AddForm({ todos, setTodo }) {
     setTitle(event.target.value);
   }
 
-  function handleAddTodo() {
+  function add() {
     if (title.trim().length === 0) {
       setErrorMessage("Input value cant be empty!");
       return;
@@ -35,6 +34,16 @@ export default function AddForm({ todos, setTodo }) {
     });
   }
 
+  function handleAddTodo() {
+    add();
+  }
+
+  function handleKeyDown(e) {
+    if (e.key === "Enter") {
+      add();
+    }
+  }
+
   return (
     <Fragment>
       <section className={styles.formContainer}>
@@ -42,6 +51,7 @@ export default function AddForm({ todos, setTodo }) {
           className={styles.submitedValue}
           value={title}
           onChange={(e) => handleChangeValue(e)}
+          onKeyDown={(e) => handleKeyDown(e)}
           type="text"
           placeholder="Lorem Ipsum"
         />
